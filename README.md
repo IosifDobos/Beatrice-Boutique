@@ -1,13 +1,13 @@
 # Beatrice-Boutique Online Shop
 
-### Introduction
+## Introduction
 For this assignment I managed to create an online shop called BeatriceBoutique. For first delivery an design analysis requirement is need in order to create the web server application. Use case are used to show the interaction between user and system itself which describe the activities and shows the possibilities of a goal to be achieved. Customer use case shows the activities and possibilities that user have when access the website.
 
-### Customer use case diagram:
+## Customer use case diagram:
 
 ![image](https://user-images.githubusercontent.com/22156333/49641835-383d6f00-fa09-11e8-9109-be76fa62a131.png)
 
-#### Use Case Description
+### Use Case Description
 
 1.    Register
 
@@ -42,7 +42,7 @@ o    If correct the order is completed
 •    Can navigate through the webpage, can view items, search for in item
 •    If they want to buy an item they have to register, then login using the credentials in order to proceed.
 
-### Admin use case diagram:
+## Admin use case diagram:
 
 ![image](https://user-images.githubusercontent.com/22156333/49642468-0af1c080-fa0b-11e8-8fe7-2eff877a51fb.png)
 
@@ -51,6 +51,18 @@ The administrator has the full privilege to manage the website by adding a new i
 ### BeatriceBoutique Class Diagram
 
 ![image](https://user-images.githubusercontent.com/22156333/49642549-4a201180-fa0b-11e8-8fc4-ab65b1c6a0e8.png)
+
+### Beatrice-Boutiques Online Shop sequence diagram
+
+![image](https://user-images.githubusercontent.com/22156333/49642796-eb0ecc80-fa0b-11e8-9b68-8e0789c0c744.png)
+
+### Sequence diagram for adding a product to the website
+
+![image](https://user-images.githubusercontent.com/22156333/49642796-eb0ecc80-fa0b-11e8-9b68-8e0789c0c744.png)
+
+### Sequence diagram for login user
+
+![image](https://user-images.githubusercontent.com/22156333/49642915-2f9a6800-fa0c-11e8-8c3b-6ddc9008744f.png)
 
 
 
