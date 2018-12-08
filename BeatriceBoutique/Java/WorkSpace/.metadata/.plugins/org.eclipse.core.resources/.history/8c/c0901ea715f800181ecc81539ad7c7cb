@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styleSheet.css">
+<title>Login Page</title>
+</head>
+
+<body>
+	
+	<h1>Login\Register Page</h1>
+
+	<ul>
+		<li><a href="homePage.html">Home Page</a></li>
+		<li><a href="shoppingCart.html">Shopping Cart</a></li>
+		<li><a href="contact.html">Contact US</a></li>
+		<li><a href="login.html">Login/Register</a></li>
+	</ul>
+	
+	<div class = "container">
+
+            <!-- <form action="FrontController" method="post">
+                <label for="username">Username</label>
+                	<input type="text" id="username" name="usernane" placeholder="Enter usernmame" required="required">
+                <label for="password">Password</label>
+                	<input type="password" id="password" name="password" placeholder="Enter password" required="required">
+                
+                <input type="hidden" name="action" value="LoginUser" />
+                <input type="submit" value="Login" />
+            </form>
+            
+            <p>Don't have an account yet? Click <a href="register.html">here</a> to register</p> -->
+            
+            <form action="FrontController" method="post">
+                <table>
+                    <tr>
+                        <td> Username  : </td><td> <input name="username" size=15 type="text" /> </td> 
+                    </tr>
+                    <tr>
+                        <td> Password  : </td><td> <input name="password" size=15 type="password" /> </td> 
+                    </tr>
+                </table>
+                
+                <input type="hidden" name="action" value="LoginUser" />
+                <input type="submit" value="login" />
+            </form>
+            
+     </div>
+
+</body>
+</html>

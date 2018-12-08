@@ -1,0 +1,60 @@
+package com.example.business;
+
+
+public class CartItem{
+
+	/**
+	 * 
+	 */
+	private int id;
+	private String product;
+	private int quantity;
+	private double price;
+	
+	public CartItem(int id, String product, int quantity, double price) {
+		this.setId(id);
+		this.setProductName(product);
+		this.setQuantity(quantity);
+		this.setPrice(price);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getProduct() {
+		return product;
+	}
+
+	public void setProductName(String product) {
+		this.product = product;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public double getTotalCost() {
+		return (double) this.quantity * price;
+	}
+
+	
+	
+
+}

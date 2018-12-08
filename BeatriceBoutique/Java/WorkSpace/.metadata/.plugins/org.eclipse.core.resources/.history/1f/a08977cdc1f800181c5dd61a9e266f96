@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"
+    import="com.example.business.ShoppingCart"
+     import="com.example.business.CartItem"
+     import="java.util.*"
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styleSheet.css">
+<title>Shopping Cart</title>
+</head>
+<body>
+
+	<h1>Shopping Cart</h1>
+	
+	<ul>
+		<li><a href="homePage.html">Home Page</a></li>
+		<li><a href="shoppingCart.html">Shopping Cart</a></li>
+		<li><a href="contact.html">Contact US</a></li>
+		<li><a href="login.html">Login/Register</a></li>
+	</ul>
+	
+	
+	<div class ="container">
+		<h1> Shopping Cart Items</h1>
+		
+		<% 	List<CartItem> cartItems; 
+			cartItems = (List<CartItem>) request.getSession().getAttribute("cartItems"); %>
+	
+	<table border="1">
+		<tr>
+			<td>Name</td>
+			<td>Quantity</td>
+			<td>UnitPrice</td>
+			<td>Total Price</td>
+		</tr>
+		<% for(int i = 0; i < cartItems.size(); i++){ %>
+		<tr>
+			<td><%= cartItems.get(i).getProduct().getName %></td>
+			<td><%= cartItems.get(i).getQuantity() %></td>
+			<td><%= cartItems.get(i).getPrice() %></td>
+			<td><%= cartItems.get(i).getTotalCost() %></td>
+		</tr>
+		<% } %>
+	
+	</table>
+	
+	</div>
+
+</body>
+</html>

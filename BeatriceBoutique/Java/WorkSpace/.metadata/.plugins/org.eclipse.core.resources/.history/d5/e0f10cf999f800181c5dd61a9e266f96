@@ -1,0 +1,102 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styleSheet.css"> 
+<title>Women's Clothes</title>
+</head>
+<body>
+	
+	<h1>Beatrice's Boutique / Men's Suits</h1>
+	
+	<ul>
+		<li><a href="homePage.html">Home Page</a></li>
+		<li><a href="shoppingCart.html">Shopping Cart</a></li>
+		<li><a href="contact.html">Contact US</a></li>
+		<li><a href="login.html">Login/Register</a></li>
+	</ul>
+	
+	
+	<div class = "container">
+		<!-- left side of the container where menu is displayed -->
+		<div id="sidemenu">
+			<a href="#">New Releases</a>
+			<a href="womensClothes.html">Women's Clothes</a>
+			<a href="mensClothes.html">Men's Clothes</a>
+		</div>
+		<!-- right side of the container -->
+		<div id="right-side">
+			<p><u>Men suits</u></p>
+		
+			<img alt="dress" src="mens-img/download.jpeg" width="300" height="500" style="margin-left: 10px;">
+			
+			<img alt="dress1" src="mens-img/Fatih_Grey+Check-Black.jpg" width="300" height="300" style="margin-left: 20px;">
+			
+			<img alt="dress2" src="mens-img/Fatih_Navy-Burgundy+Check.jpg" width="300" height="300" style="margin-left: 20px;">
+			<div id="product-1">
+				<p>Men suits>>>>  Price: 149.99 euro</p>
+			</div>
+			<div id="product-2">
+				<p>Men suits >>>>  Price: 250.00 euro</p>
+			</div>
+			<div id="product-3">
+				<p>Men suits >>>>  Price: 175.00 euro</p>
+			</div>
+			<div id ="button-url">
+				<button data-url="shoppingCart.html" type="button" title="Add to shopping cart"
+				class="button">
+						Add to shopping cart					
+				</button>
+			</div>
+			<div id ="button-url1">
+				<button data-url="shoppingCart.html" type="button" title="Add to shopping cart"
+				class="button">
+						Add to shopping cart					
+				</button>
+			</div>
+			<div id ="button-url2">
+				<button data-url="shoppingCart.html" type="button" title="Add to shopping cart"
+				class="button">
+						Add to shopping cart					
+				</button>
+			</div>
+			<br><br><br><br><br><br>
+			<img alt="dress3" src="mens-img/Fatih+Blue-Mustard+Check.jpg" width="300" height="300" style="margin-left: 10px;">
+			
+			<img alt="dress4" src="womens-img/suit-1.jpeg" width="300" height="300" style="margin-left: 20px;">
+			
+			<img alt="dress5" src="womens-img/suit-2.jpg" width="300" height="300" style="margin-left: 20px;">
+			<div id="product-1">
+				<p>Men suits>>>>  Price: 149.99 euro</p>
+			</div>
+			<div id="product-2">
+				<p>Men suits >>>>  Price: 250.00 euro</p>
+			</div>
+			<div id="product-3">
+				<p>Men suits >>>>  Price: 175.00 euro</p>
+			</div>
+			<div id ="button-url">
+				<button data-url="shoppingCart.html" type="button" title="Add to shopping cart"
+				class="button">
+						Add to shopping cart					
+				</button>
+			</div>
+			<div id ="button-url1">
+				<button data-url="shoppingCart.html" type="button" title="Add to shopping cart"
+				class="button">
+						Add to shopping cart					
+				</button>
+			</div>
+			<div id ="button-url2">
+				<button data-url="shoppingCart.html" type="button" title="Add to shopping cart"
+				class="button">
+						Add to shopping cart					
+				</button>
+			</div>
+			
+		</div>
+	
+	</div>
+	
+</body>
+</html>

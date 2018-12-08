@@ -1,0 +1,41 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styleSheet.css"> 
+<title>Women's Clothes</title>
+</head>
+<body>
+	
+	<h1>Beatrice's Boutique / Women's Clothes</h1>
+	
+	<ul>
+		<li><a href="homePage.html">Home Page</a></li>
+		<li><a href="shoppingCart.html">Shopping Cart</a></li>
+		<li><a href="contact.html">Contact US</a></li>
+		<li><a href="login.html">Login/Register</a></li>
+	</ul>
+	
+	
+	<div class = "container">
+		<!-- left side of the container where menu is displayed -->
+		<div id="sidemenu">
+			<a href="#">New Releases</a>
+			<a href="womensClothes.html">Women's Clothes</a>
+			<a href="#">Men's Clothes</a>
+		</div>
+		<!-- right side of the container -->
+		<div id="right-side">
+			<p><u>Women's dress</u></p>
+			
+			<img alt="dress" src="womens-img/black-open-back-maxi-dress.jpg" width="250" height="250" style="margin-left: 25px;">
+			
+			<img alt="dress1" src="womens-img/black-sewn-through-disc-bodycon-mini-dress.jpg" width="270" height="270" style="margin-left: 35px;">
+			
+			<img alt="dress2" src="womens-img/gold-sequin-choker-maxi-dress.jpg" width="250" height="250" style="margin-left: 35px;">
+		</div>
+	
+	</div>
+	
+</body>
+</html>

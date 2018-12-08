@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/iosifdobos/Documents/College/Software Engineering III/BeatriceBoutique/Java/WorkSpace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+863140457.index
+3052716525.index
+1143476134.index
+1619848459.index
+3285247963.index
+1347341137.index

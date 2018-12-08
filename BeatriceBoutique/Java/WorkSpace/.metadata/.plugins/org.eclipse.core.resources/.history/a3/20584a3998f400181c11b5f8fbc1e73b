@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styleSheet.css"> 
+<title>BeatriceBoutique</title>
+</head>
+<body>
+	
+	<h1>Beatrice's Boutique</h1>
+	
+	<ul>
+		<li><a href="homePage.html">Home Page</a></li>
+		<li><a href="shoppingCart.html">Shopping Cart</a></li>
+		<li><a href="contact.html">Contact US</a></li>
+		<li><a href="login.html">Login/Register</a></li>
+	</ul>
+	
+	
+	<div id = "container">
+		<div name="side-left">
+			<ul>
+				<li><a href="#">New Releases</a></li>
+				<li><a href="#">Women's Clothes</a></li>
+				<li><a href="#">Men's Clothes</a></li>
+			</ul>
+		</div>
+		<div name="side-right">
+			
+		</div>
+	
+	</div>
+	
+</body>
+</html>

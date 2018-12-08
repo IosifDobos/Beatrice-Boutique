@@ -1,0 +1,71 @@
+package com.example.business;
+
+import java.io.Serializable;
+
+public class CartItem implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int id;
+	private String productName;
+	private int quantity;
+	private double price;
+	private double totalCost;
+	
+	public CartItem(int id, String productName, int quantity, double price, double totalCost) {
+		setId(id);
+		setProductName(productName);
+		setQuantity(quantity);
+		setPrice(price);
+		setTotalCost(totalCost);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public double getTotalCost() {
+		return totalCost = quantity + price;
+	}
+
+	public void setTotalCost(double totalCost) {
+		this.totalCost = totalCost;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+
+}

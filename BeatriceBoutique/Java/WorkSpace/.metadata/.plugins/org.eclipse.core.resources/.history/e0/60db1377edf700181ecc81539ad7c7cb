@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+body{
+	background-color: #f0f0f5;
+}
+
+ul {
+	position: -webkit-sticky;
+	position: sticky;
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li{
+	float: left;
+}
+
+li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 16px;
+	text-decoration: none;
+	width: 100px;
+	
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.container{
+	margin-top: 25px;
+	margin-left: 25px;
+	margin-right: 25px;
+	background-color:  white;
+	min-height: 400px;
+	width: 95%;
+}
+
+/*#container:after{
+	content: "";
+	display: table;
+	clear: both;
+} */
+
+
+
+#sidemenu {
+    min-height: 100px;; /* Full-height: remove this if you want "auto" height */
+    width: 150px;; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 150px; /* Stay at the top */
+    left: 50px;
+    background-color: ; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 8px 0;
+}
+
+#sidemenu a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+#sidemenu a:hover {
+    color: #679898;
+}
+
+/* Style page content */
+#right-side {
+    margin-left: 170px; /* Same as the width of the sidebar */
+    padding: 3px 5px 20px 20px;
+    background-color: #f0f5f5;
+    min-height: 300px;
+}
+
+
+/* #right-side{
+	float: right;
+	margin-right: 20px;
+	width: 60%;
+} */
+
+
+#product-1{
+	position: absolute;
+	margin-left: 15px;
+}
+
+#product-2{
+	position: absolute;
+	margin-left: 345px;
+}
+
+#product-3{
+	position: absolute;
+	margin-left: 665px;
+}
+
+#button-url{
+	position: absolute;
+	margin-top: 35px;
+	margin-left: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    #sidemenu {padding-top: 15px;}
+    #sidemenu a {font-size: 18px;}
+}

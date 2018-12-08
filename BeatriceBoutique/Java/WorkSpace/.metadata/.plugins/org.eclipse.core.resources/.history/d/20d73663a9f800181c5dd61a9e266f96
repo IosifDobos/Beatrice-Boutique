@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styleSheet.css">
+<title>Registration Form</title>
+</head>
+<body>
+
+	<h1>Login\Register Page</h1>
+
+	<ul>
+		<li><a href="homePage.html">Home Page</a></li>
+		<li><a href="shoppingCart.jsp">Shopping Cart</a></li>
+		<li><a href="contact.html">Contact US</a></li>
+		<li><a href="login.html">Login/Register</a></li>
+	</ul>
+
+	<div id = "container">
+		<form action="FrontController" method="post">
+	    	<table>
+	    		<tr>
+	            	<td> First Name  : </td><td> <input name="firstName" size=15 type="text" /> </td> 
+	            </tr>
+	            <tr>
+	                <td> Last Name  : </td><td> <input name="lastName" size=15 type="text" /> </td> 
+	            </tr>
+	            <tr>
+	            	<td>Address Line 1 : </td><td> <input name="addressLine1" size=15 type="text" /> </td>
+	            </tr>
+	            <tr>
+	            	<td>Address Line 2 : </td><td> <input name="addressLine2" size=15 type="text" /> </td>
+	            </tr>
+	            <tr>
+	            	<td>Phone no : </td> <td> <input name="phoneNo" size=15 type="text" /> </td>
+	            </tr>
+	            <tr>
+	            	<td>Email : </td> <td> <input name="email" size=15 type="email" /> </td>
+	            </tr>
+	            <tr>
+	            	<td>Username : </td> <td> <input name="username" size=15 type="text" /> </td>
+	            </tr>
+	            <tr>
+	            	<td>Password : </td> <td> <input name="password" size=15 type="password" /> </td>
+	            </tr>
+	            <tr>
+	            	<td>Re-type Password : </td> <td> <input name ="re-typePassword" size=15 type="password" /> </td>
+	            </tr>
+	        </table>
+	                
+	                <input type="hidden" name="action" value="RegisterUser" />
+	                <input type="submit" value="register" />
+		</form>
+	</div>
+</body>
+</html>

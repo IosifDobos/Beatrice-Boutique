@@ -1,0 +1,61 @@
+package com.example.command;
+//
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+//
+import com.example.business.User;
+import com.example.service.UserService;
+
+public class RegisterUserCommand {
+	
+	public String execute(HttpServletRequest request, HttpServletResponse repsonse) {
+		
+		UserService userService = new UserService();
+		String forwardToJsp = "";
+//		
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String addressLine1 = request.getParameter("addressLine1");
+		String addressLine2 = request.getParameter("addressLine2");
+		int phoneNo = request.getIntHeader("phoneNo");
+		String email = request.getParameter("email");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String retypePassword = request.getParameter("retypePassword");
+
+		if(password != retypePassword)
+			System.out.print("Invalid Password");
+		
+		if(firstName != null && lastName != null && addressLine1 != null && phoneNo != 0
+				&& email != null && username != null && password != null) 
+		{
+			//Make call to the 'Model' using the UserServive class to login...
+			User registerUserIn = userService.register(firstName, lastName,
+					addressLine1, addressLine2,phoneNo, email, username, password);
+
+			if (registerUserIn != null )
+			{
+//
+//				//If login successful, store the session id for this client...
+//				//HttpSession session = request.getSession();
+//				//String clientSessionId = session.getId();
+//				//session.setAttribute("loggedSessionId", clientSessionId);
+//
+//				session.setAttribute("user", userLoggingIn);
+//
+				forwardToJsp = "/login.html";	
+			}
+			else
+				System.out.println("Fields cannot be blank");
+				forwardToJsp = "/loginFailure.jsp";
+		}
+		else
+		{	
+			System.out.println("Fields cannot be blank");
+			forwardToJsp = "/loginFailure.jsp";		
+			
+		}
+		
+		return forwardToJsp;
+	}
+}

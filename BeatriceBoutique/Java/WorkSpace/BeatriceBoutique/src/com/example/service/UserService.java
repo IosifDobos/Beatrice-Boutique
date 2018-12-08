@@ -1,0 +1,40 @@
+package com.example.service;
+
+import com.example.business.User;
+import com.example.dao.UserDao;
+import com.example.exceptions.DaoException;
+
+public class UserService {
+
+	UserDao dao = new UserDao();
+	
+	public User login(String username, String password){
+		
+		User u = null;
+		try {			
+			u = dao.findUserByUsernamePassword(username, password);
+		} 
+		catch (DaoException e) {
+			e.printStackTrace();
+		}
+		return u;
+		
+	}
+	
+	public User register(String firstName, String lastName, String addressLine1, String addressLine2, String phoneno, 
+			String email, String username, String password){
+		
+		User user = null;
+		try {
+			user = dao.registerUserIn(firstName, lastName, addressLine1, addressLine2, phoneno, email, username, password);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		return user;
+	}
+	
+}

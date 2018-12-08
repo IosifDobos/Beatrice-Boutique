@@ -1,0 +1,33 @@
+package com.example.business;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShoppingCart {
+	
+	int cartID;
+	int numberOfitems;
+	float cartPrice = 0;
+	List<CartItem> cartItems = new ArrayList<CartItem>();
+	
+	public ShoppingCart(){
+		
+	}
+	
+	public void additem(CartItem cartItem) {
+		cartItems.add(cartItem);
+	}
+	
+	public List<CartItem> showCartItems() {
+		return cartItems;
+	}
+	
+	public void removeItem(int cartItemId) {
+		
+	}
+	
+	public void calculateTotalPrice() {
+		
+	}
+
+}

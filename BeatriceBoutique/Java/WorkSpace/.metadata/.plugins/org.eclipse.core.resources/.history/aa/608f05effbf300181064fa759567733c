@@ -1,0 +1,18 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styleSheet.css"> 
+<title>BeatriceBoutique</title>
+</head>
+<body>
+	
+	<h1>Beatrice's Boutique</h1>
+	
+	<a href="homePage.html">Home Page</a>
+	<a href="viewShoppingCart.html">Shopping Cart</a>
+	<a href="contact.html">Contact US</a>
+	<a href="login.html">Login/Register</a>
+	
+</body>
+</html>

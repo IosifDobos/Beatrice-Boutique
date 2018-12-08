@@ -1,0 +1,61 @@
+package com.example.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import com.example.business.User;
+import com.example.exceptions.DaoException;
+
+
+public class UserDao extends Dao {
+
+    public User findUserByUsernamePassword(String uname, String pword) throws DaoException {
+
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        User u = null;
+        try {
+            con = this.getConnection();
+            
+            String query = "SELECT * FROM CUSTOMER WHERE USERNAME = ? AND PASSWORD = ?";
+            ps = con.prepareStatement(query);
+            ps.setString(1, uname);
+            ps.setString(2, pword);
+            
+            rs = ps.executeQuery();
+            if (rs.next()) {
+            	int userId = rs.getInt("ID");
+                String username = rs.getString("USERNAME");
+                String password = rs.getString("PASSWORD");
+                String lastname = rs.getString("LAST_NAME");
+                String firstname = rs.getString("FIRST_NAME");
+                String addressline1 = rs.getString("ADDRESS_LINE_1");
+                String addressline2 = rs.getString("ADDRESS_LINE_1");
+                int phoneno = rs.getInt("PHONE_NO");
+                int email = rs.getString("EMAIL");
+                
+                u = new User(userId, username, password, lastname, firstname, addressline1, addressline2, phoneno, email);
+            }
+        } catch (SQLException e) {
+            throw new DaoException("findUserByUsernamePassword " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("findUserByUsernamePassword" + e.getMessage());
+            }
+        }
+        return u;     // u may be null 
+    }
+   
+}

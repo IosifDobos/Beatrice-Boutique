@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import =  "java.util.ArrayList" %>
+<%@ page import = "com.example.business.Product"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Release</title>
+</head>
+<body>
+	
+	
+	
+	
+	
+	
+	new Release.jsp
+	
+	<br/><br/>
+	<% ArrayList<Product> products;
+	products = (ArrayList)(request.getSession().getAttribute("allProductsList")); %>
+	<table>
+	<% for(int i=0; i<products.size(); i++){
+		Product product = products.get(i);  %>
+	<tr>
+		<td><%= products.get(i).getProductName() %></td>
+		<td><%= products.get(i).getPrice() %></td>
+		<td>	
+		<form action="FrontController" method="post">		
+		<input type="text" name="quantity"/>
+		<input  type="hidden" name="productToCart" value="<%= products.get(i).getId()%>" />
+	     <input type="hidden" name="action" value="AddToCart" />
+         <input type="submit" value="action" />
+   		</form>
+   		</td>
+		
+		
+	</tr>
+	<% } %>
+	
+	</table> --%>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+DROP TABLE ShoppingCart;
+DROP TABLE CartItem;
+DROP TABLE Product;
+DROP TABLE User
+
+Create Table User(
+	ID number(20) NOT NULL AUTO_INCREMENT,
+	FIRST_NAME varchar(50) NOT NULL,
+	LAST_NAME varchar(50) NOT NULL,
+	ADDRESS_LINE_1 varchar(100) NOT NULL,
+	ADDRESS_LINE_2 varchar(100) NOT NULL,
+	PHONE_NO number(10) NOT NULL,
+	EMAIL number(100) NOT NULL,
+	USERNAME varchar(20) NOT NULL,
+	PASSWORD varchar(20) NOT NULL,
+
+	PRIMARY KEY ID
+
+);
+
+Create Table Product(
+	ID number(20) NOT NULL AUTO_INCREMENT,
+	PRODUCT_NAME varchar(100) NOT NULL,
+	DESCRIPTION varchar(255) NOT NULL,
+	QUANTITY number(3) NOT NULL,
+	PRICE number(5,2) NOT NULL,
+	IMAGE varchar(100) NOT NULL,
+
+	PRIMARY KEY(ID)
+);
+
+Create Table ShoppingCart(
+	ID number(20) NOT NULL AUTO_INCREMENT,
+	USER_SHOPPINGCARTID number(20) NOT NULL,
+
+	CONSTRAINT ShoppingCart_User_FK FOREIGN KEY (USER_SHOPPINGCARTID) REFERENCES User(ID),
+	UNIQUE USER_SHOPPINGCARTID
+
+);
+
+Create Table CartItem(
+	ID number(20) NOT NULL AUTO_INCREMENT,
+	PRODUCT_NAME varchar(100) NOT NULL,
+	QUANTITY number(3) NOT NULL,
+	PRICE number(5,2) NOT NULL
+	TOTAL_COST number(8,2) NOT NULL,
+	SHOPPINGCART_CARTITEMID number NOT NULL,
+
+	PRIMARY KEY(ID),
+	CONSTRAINT CartItem_ShoppingCart_FK FOREIGN KEY (SHOPPINGCART_CARTITEMID) REFERENCES ShoppingCart(ID)
+
+);
+
+INSERT INTO Product VALUES(null, "Fatih Zeurek Wine", "100% cotton quality",
+	20, 150.00, "iosifdobos/Documents/College/Software Engineering III/BeatriceBoutique/Java/Images/download.jpeg");
+
+

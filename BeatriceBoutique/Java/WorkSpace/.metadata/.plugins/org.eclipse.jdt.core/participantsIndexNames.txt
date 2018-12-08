@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+/Users/iosifdobos/Documents/College/Software Engineering III/BeatriceBoutique/Java/WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3165827279.index
+/BeatriceBoutique/src
+/Users/iosifdobos/Documents/College/Software Engineering III/BeatriceBoutique/Java/WorkSpace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/350021313.index
+/Beatrice'sBoutique/src

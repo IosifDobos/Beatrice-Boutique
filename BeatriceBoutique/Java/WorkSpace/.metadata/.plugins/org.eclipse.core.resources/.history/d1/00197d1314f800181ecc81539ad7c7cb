@@ -1,0 +1,112 @@
+package com.example.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import com.example.business.User;
+import com.example.exceptions.DaoException;
+
+
+public class CustomerDao extends Dao {
+
+    public User findUserByUsernamePassword(String uname, String pword) throws DaoException {
+
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        User customer = null;
+        try {
+            con = this.getConnection();
+            
+            String query = "SELECT * FROM CUSTOMER WHERE USERNAME = username AND PASSWORD = password";
+            ps = con.prepareStatement(query);
+            ps.setString(1, uname);
+            ps.setString(2, pword);
+            
+            rs = ps.executeQuery();
+            if (rs.next()) {
+            	int userId = rs.getInt("ID");
+                String username = rs.getString("USERNAME");
+                String password = rs.getString("PASSWORD");
+                String firstname = rs.getString("FIRST_NAME");
+                String lastname = rs.getString("LAST_NAME");
+                String addressline1 = rs.getString("ADDRESS_LINE_1");
+                String addressline2 = rs.getString("ADDRESS_LINE_2");
+                String phoneno = rs.getString("PHONE_NO");
+                String email = rs.getString("EMAIL");
+                
+                customer = new User(userId, firstname, lastname, addressline1, 
+                		addressline2, phoneno, email, username, password);
+            }
+        } catch (SQLException e) {
+            throw new DaoException("findUserByUsernamePassword " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("findUserByUsernamePassword" + e.getMessage());
+            }
+        }
+        return customer;     // customer may be null 
+    }
+    
+    
+    public User registeringCustomer( String firstName, String lastName, String addressLine1, String addressLine2, String phoneNo, String email, String username, 
+    		String password) throws DaoException {
+    	Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        User customer = null;
+        
+        try {
+            con = this.getConnection();
+            
+            String query = "INSERT INTO Customer(firstName, lastName, addressLine1, addressLine2, phoneNo, email, username, passord)";
+            ps = con.prepareStatement(query);
+            
+            rs = ps.executeQuery();
+            if (rs.next()) {
+            	int userId = rs.getInt("ID");
+                String firstname = rs.getString("FIRSTNAME");
+                String lastname = rs.getString("LASTNAME");
+                String addressline1 = rs.getString("ADDRESSLINE1");
+                String addressline2 = rs.getString("ADDRESSLINE2");
+                String phoneno = rs.getString("PHONENO");
+                String email1 = rs.getString("EMAIL");
+                String username1 = rs.getString("USERNAME");
+                String password1 = rs.getString("PASSWORD");
+                
+                customer = new User(userId, firstname, lastname, addressline1, 
+                		addressline2, phoneno, email1, username, password);
+            }
+        } catch (SQLException e) {
+            throw new DaoException("registeringCustomer" + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("registeringCustomer" + e.getMessage());
+            }
+        }
+    	
+    	return customer;
+    }
+   
+}

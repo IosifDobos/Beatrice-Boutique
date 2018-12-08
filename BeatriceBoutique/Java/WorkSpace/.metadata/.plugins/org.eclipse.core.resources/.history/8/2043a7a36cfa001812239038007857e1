@@ -1,0 +1,25 @@
+-- DROP TABLE 'Customer';
+
+CREATE TABLE 'Customer'(
+	'id' integer(5) NOT NULL AUTO_INCREMENT,
+	'username' varchar(20) NOT NULL,
+	'firstName' varchar(50) NOT NULL,
+	'lastName' varchar(50) NOT NULL,
+	'addressLine1' varchar(50) NOT NULL,
+	'addressLine2' varchar(50) NOT NULL,
+	'phoneNo' int(10) NOT NULL,
+	'email' varchar(100) NOT NULL,
+	'PASSWORD' varchar(20) NOT NULL,
+	
+	PRIMARY KEY('ID')
+);
+
+
+
+INSERT INTO Customer VALUES(null, "iosifdobos", "Iosif", "Dobos", "Cedarwood Rise, Glasnevin",	"Dublin 11", 0891234534, "joesman@gmail.com", "password");	
+INSERT INTO Customer VALUES(null, "carlosc", "Carlos", "Conzales", "Somewehere in Spain", "Barcelona", 1234567898, "carlos_the_man@gmail.com", "password");	
+INSERT INTO Customer VALUES(null, "darrenb", "Darren", "Byrne", "somewhere in Ireland",	"Dublin -12", 454545459, "darrenb89@gmail.com",	"password");	
+INSERT INTO Customer VALUES(null, "valentinc", "Valentin", "Ciceu",	"Smithfield", "Dublin none", 1231231239, "valc@gmail.com", "password");	
+
+commit;
+
