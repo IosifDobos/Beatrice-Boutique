@@ -64,7 +64,7 @@ The administrator has the full privilege to manage the website by adding a new i
 
 ### Sequence diagram for adding a product to the website
 
-![image](https://user-images.githubusercontent.com/22156333/49643020-8607a680-fa0c-11e8-842f-9290d238595c.png
+![image](https://user-images.githubusercontent.com/22156333/49764300-f5102400-fcc6-11e8-839c-8c2af7d380ca.png)
 
 ### Sequence diagram for login user
 
