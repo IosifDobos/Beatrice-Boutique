@@ -50,7 +50,7 @@ For this assignment I managed to create an online shop called BeatriceBoutique. 
 
 ## Admin use case diagram:
 
-![image](https://user-images.githubusercontent.com/22156333/49642468-0af1c080-fa0b-11e8-8fe7-2eff877a51fb.png)
+![admin use case](https://user-images.githubusercontent.com/22156333/49642468-0af1c080-fa0b-11e8-8fe7-2eff877a51fb.png)
 
 The administrator has the full privilege to manage the website by adding a new item to the page, edit and item, delete an item, update the price of an item and manage a customer order.
 
