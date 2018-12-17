@@ -70,5 +70,7 @@ The administrator has the full privilege to manage the website by adding a new i
 
 ![image](https://user-images.githubusercontent.com/22156333/49642915-2f9a6800-fa0c-11e8-8c3b-6ddc9008744f.png)
 
+Link to the web server application code can be found [here](https://github.com/IosifDobos/Beatrice-Boutique/tree/master/BeatriceBoutique/Java/WorkSpace)
+
 
 
